@@ -1,0 +1,130 @@
+
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Mr Youtube Module</name>
+    <author>@cruzriga</author>
+    <version>1.0.0</version>
+    <description>
+        un simple y práctico modulo para mostrar videos de youtube 
+
+
+
+
+    </description>
+    <files>
+        <folder>bxslider</folder>
+        <folder>libs</folder>
+        <folder>js</folder>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename module="mod_mr_youtube">mod_mr_youtube.php</filename>
+        <filename>mod_mr_youtube.xml</filename>
+    </files>
+
+    <media folder="media" destination="bxslider">
+
+       
+        <folder>bxslider/images</folder>
+        <folder>bxslider/plugins</folder>
+        <filename>bxslider/bower.json</filename> 
+        <filename>bxslider/jquery.bxslider.css</filename>
+        <filename>bxslider/jquery.bxslider.js</filename>
+        <filename>bxslider/jquery.bxslider.min.js</filename>
+        <filename>bxslider/readme.md</filename> 
+             
+    </media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                 <field  name="mr_youtube_id" 
+                        label="ID : "
+                        description="ID UNICO PARA EL SLIDER"
+                        type="text"/>
+
+                <field  name="mr_youtube_video_list" 
+                        label="LISTADO DE VIDEOS: "
+                        description="LISTA DE VIDEOS DE YOTUBE, SEPARADO POR (,)"
+                        type="textarea"
+                        rows="10" cols="5"
+                />
+                <field  name="mr_youtube_video_tumb_size_y" 
+                        label="ALTO IMG (H): "
+                        description="ALTO DE LA IMAGEN DE PREVIEW"
+                        type="text"/>
+                <field  name="mr_youtube_video_tumb_size_x" 
+                        label="ANCHO IMG (W): "
+                        description="ANCHO DE LA IMAGEN DE PREVIEW"
+                        type="text"/>
+
+                <field  name="mr_youtube_video_total_videos" 
+                        label="CANT VIDEOS : "
+                        description="CANTIDAD DE VIDEOS MOSTRADOS ANTES DEL SCROLL"
+                        type="text"
+                        value="1"
+                        filter="integer"/>
+
+                <field  name="mr_youtube_video_tumb_margin" 
+                        label="MARGEN: "
+                        description="MARGEN ENTRE LAS IMGS"
+                        type="text"/>
+
+                <field name="mr_youtube_mode" 
+                        type="groupedlist" 
+                        default="horizontal" 
+                        label="MODO PROYECCION" 
+                        description="">
+                      
+                         <option value="horizontal">HORIZONTAL</option>
+                           <option value="vertical">VERTICAL</option>
+                           <option value="fade">FADE</option>
+                           <option value="ticker">TICKER (NON STOP)</option>
+                </field>
+                <field
+                        name="mr_youtube_auto"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="AUTO PLAY"
+                        description="">
+                        <option
+                            value="1">JYES</option>
+                        <option
+                            value="0">JNO</option>
+                 </field>
+
+                 <field
+                        name="mr_youtube_controls"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="true"
+                        label="CONTROLES"
+                        description="">
+                        <option
+                            value="true">JYES</option>
+                        <option
+                            value="false">JNO</option>
+                </field>
+
+                 <field  name="mr_youtube_speed" 
+                        label="SPEED: "
+                        description=""
+                        default="500" 
+                        type="text"/>
+
+                <field  name="mr_youtube_pause" 
+                        label="PAUSE: "
+                        description=""
+                        default="1000" 
+                        type="text"/>
+
+
+            </fieldset>
+
+             
+
+        </fields>
+
+
+
+    </config>
+</extension>
